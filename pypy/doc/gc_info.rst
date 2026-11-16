@@ -320,9 +320,9 @@ several environment variables:
 
 ``PYPY_GC_INCREMENT_STEP``
     The size of memory marked during the marking step.  Default is size of
-    nursery times 2. If you mark it too high your GC is not incremental at
+    nursery times 4. If you mark it too high your GC is not incremental at
     all.  The minimum is set to size that survives minor collection times
-    1.5 so we reclaim anything all the time.
+    2 so we reclaim anything all the time.
 
 ``PYPY_GC_MAJOR_COLLECT``
     Major collection memory factor.

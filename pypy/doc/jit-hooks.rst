@@ -25,7 +25,7 @@ understanding what pypy's JIT is doing while running your program:
     Set a compiling hook that will be called each time a loop is compiled.
 
     The callable will be called with the ``pypyjit.JitLoopInfo`` object.
-    Refer to it's documentation for details.
+    Refer to its documentation for details.
 
     Note that jit hook is not reentrant. It means that if the code
     inside the jit hook is itself jitted, it will get compiled, but the
@@ -39,7 +39,7 @@ understanding what pypy's JIT is doing while running your program:
     Set a hook (callable) that will be called each time there is tracing
     aborted due to some reason.
 
-    The hook will be invoked with the siagnture:
+    The hook will be invoked with the signature:
     ``hook(jitdriver_name, greenkey, reason, oplist)``
 
     Reason is a string, the meaning of other arguments is the same
@@ -94,8 +94,8 @@ understanding what pypy's JIT is doing while running your program:
 
    * ``jitdriver_name`` - the name of jitdriver associated with this loop
 
-   * ``greenkey`` - a key at which the loop got compiled (e.g. code position,
-     is_being_profiled, pycode tuple for python jitdriver)
+   * ``greenkey`` - a key at which the loop got compiled (e.g. pycode tuple for python jitdriver,
+     code position, is_being_profiled)
 
    * ``loop_no`` - loop cardinal number
 
